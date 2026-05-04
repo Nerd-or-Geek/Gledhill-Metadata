@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Documentation for Gledhill Metadata, including importing photos, metadata templates, renaming, settings, troubleshooting, and bug reports." />
+  <meta name="description" content="Official documentation for Gledhill Metadata: quick start, metadata templates, renaming, troubleshooting, media, and support resources." />
+  <meta name="keywords" content="Gledhill Metadata documentation, EXIF editor guide, metadata templates, batch rename help" />
   <title>Documentation — Gledhill Metadata</title>
   <meta property="og:title" content="Documentation — Gledhill Metadata" />
-  <meta property="og:description" content="Learn how to use Gledhill Metadata to import photos, edit metadata, apply templates, rename files, and troubleshoot common issues." />
+  <meta property="og:description" content="Learn how to import photos, apply templates, rename files, troubleshoot issues, and submit high-quality bug reports." />
   <meta property="og:image" content="https://nerd-or-geek.github.io/Gledhill-Metadata/assets/screenshot-1.PNG" />
   <meta property="og:url" content="https://nerd-or-geek.github.io/Gledhill-Metadata/docs.html" />
+  <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://nerd-or-geek.github.io/Gledhill-Metadata/docs.html" />
   <link rel="icon" type="image/x-icon" href="gledhillmetadata/assets/icons/app_logo.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,37 +25,36 @@
       <a href="index.html" class="brand" aria-label="Gledhill Metadata home">Gledhill Metadata</a>
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html#features">Features</a>
-        <a href="index.html#screenshots">Screenshots</a>
-        <a href="docs.html" class="active" aria-current="page">Documentation</a>
+        <a href="index.html#gallery">Gallery</a>
         <a href="index.html#download">Download</a>
+        <a href="docs.html" class="active" aria-current="page">Documentation</a>
       </nav>
-      <a class="btn btn-outline btn-small" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">View Source</a>
+      <a class="btn btn-outline btn-small" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </header>
 
   <main id="top">
     <section class="doc-hero">
       <div class="container doc-hero-inner" data-reveal>
-        <span class="version-pill">v1.6.0 docs</span>
-        <h1>Gledhill Metadata Documentation</h1>
-        <p class="hero-tagline">A practical guide for importing photos, editing metadata, applying templates, renaming files, and collecting useful bug details.</p>
+        <p class="eyebrow">Documentation Center</p>
+        <h1>Learn the full Gledhill Metadata workflow</h1>
+        <p class="hero-tagline">From first import to production-ready batch output — this guide helps you onboard quickly and troubleshoot effectively.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#quick-start">Start here</a>
-          <a class="btn btn-outline" href="#troubleshooting">Troubleshooting</a>
+          <a class="btn btn-ghost" href="#tutorial-video">Watch tutorial</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container doc-layout">
-        <aside class="doc-sidebar" aria-label="Documentation sections">
+        <aside class="doc-sidebar" aria-label="Documentation section navigation">
           <nav>
             <a href="#quick-start">Quick start</a>
-            <a href="#linux-install">Linux install</a>
-            <a href="#photo-browser">Photo browser</a>
-            <a href="#metadata">Metadata templates</a>
+            <a href="#metadata-templates">Metadata templates</a>
             <a href="#renaming">Renaming files</a>
-            <a href="#settings">Settings</a>
+            <a href="#media">Media gallery</a>
+            <a href="#tutorial-video">Video tutorial</a>
             <a href="#troubleshooting">Troubleshooting</a>
             <a href="#bug-reports">Bug reports</a>
           </nav>
@@ -61,116 +63,123 @@
         <div class="doc-content">
           <section id="quick-start" class="doc-section" data-reveal>
             <h2>Quick start</h2>
-            <ol class="doc-steps">
-              <li>Open Gledhill Metadata and choose <strong>Pick Photos</strong>, or drag image files into the main window.</li>
-              <li>Select the photos you want to update from the photo browser.</li>
-              <li>Choose a metadata template and naming convention.</li>
-              <li>Review the rename preview, then click <strong>Apply</strong>.</li>
-              <li>Confirm the Apply warning so the app can update metadata and filenames.</li>
-            </ol>
-            <div class="doc-callout">
-              <strong>Tip:</strong> Gledhill Metadata works locally on your computer. Your images are not uploaded to a cloud service.
-            </div>
-          </section>
-
-          <section id="linux-install" class="doc-section" data-reveal>
-            <h2>Linux install scripts</h2>
-            <p>You can install and uninstall the Linux AppImage directly from curl:</p>
-            <pre class="code-block"><code>curl -fsSL https://raw.githubusercontent.com/Nerd-or-Geek/Gledhill-Metadata/main/linux/install.sh | bash</code></pre>
-            <pre class="code-block"><code>curl -fsSL https://raw.githubusercontent.com/Nerd-or-Geek/Gledhill-Metadata/main/linux/uninstall.sh | bash</code></pre>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://raw.githubusercontent.com/Nerd-or-Geek/Gledhill-Metadata/main/linux/install.sh" target="_blank" rel="noopener noreferrer">Installer Script</a>
-              <a class="btn btn-outline" href="https://raw.githubusercontent.com/Nerd-or-Geek/Gledhill-Metadata/main/linux/uninstall.sh" target="_blank" rel="noopener noreferrer">Uninstaller Script</a>
-              <a class="btn btn-secondary" href="https://raw.githubusercontent.com/Nerd-or-Geek/Gledhill-Metadata/main/linux/setup_linux_build.sh" target="_blank" rel="noopener noreferrer">Build Setup Script</a>
-            </div>
-          </section>
-
-          <section id="photo-browser" class="doc-section" data-reveal>
-            <h2>Photo browser</h2>
-            <p>Use the photo browser to review loaded images, choose which files are selected, and inspect metadata for the focused photo.</p>
+            <p>Use this path for your first successful batch in under five minutes.</p>
             <div class="doc-grid">
               <article class="doc-card">
-                <h3>List view</h3>
-                <p>Shows a compact thumbnail and filename for each image. This is useful on smaller screens or when you need to scan many filenames quickly.</p>
+                <h3>1) Import photos</h3>
+                <p>Open the app and click <strong>Pick Photos</strong>, or drag files directly into the main view.</p>
               </article>
               <article class="doc-card">
-                <h3>Grid view</h3>
-                <p>Shows larger thumbnails with filenames. Adjust the grid thumbnail size in Settings to fit more images or see bigger previews.</p>
+                <h3>2) Select output rules</h3>
+                <p>Choose a metadata template and naming convention that fits the shoot.</p>
               </article>
+              <article class="doc-card">
+                <h3>3) Review previews</h3>
+                <p>Check fields and rename output before applying changes to your files.</p>
+              </article>
+              <article class="doc-card">
+                <h3>4) Apply and verify</h3>
+                <p>Commit changes, then spot-check a few files to confirm the expected result.</p>
+              </article>
+            </div>
+            <div class="doc-callout">
+              <strong>Tip:</strong> Keep one clean “golden template” for recurring workflows (events, products, archives).
             </div>
           </section>
 
-          <section id="metadata" class="doc-section" data-reveal>
+          <section id="metadata-templates" class="doc-section" data-reveal>
             <h2>Metadata templates</h2>
-            <p>Templates let you save reusable metadata values and apply them consistently across selected photos.</p>
-            <h3>Recommended XMP field order</h3>
+            <p>Templates standardize metadata entry and reduce repetitive editing across shoots.</p>
             <ol class="doc-steps">
-              <li>Title</li>
-              <li>Description / Subject</li>
-              <li>Tags / Keywords</li>
-              <li>Comments / Headline</li>
-              <li>Authors / Creator</li>
-              <li>Copyright</li>
+              <li>Create a template with your most-used fields.</li>
+              <li>Name it clearly by workflow (e.g., <em>Wedding-Editorial</em>).</li>
+              <li>Apply the template to selected photos in one action.</li>
+              <li>Save revisions when standards change.</li>
             </ol>
-            <p>The app also supports headline fields such as <strong>IPTC.Headline</strong> and <strong>XMP.Headline</strong>.</p>
+            <div class="doc-callout">
+              <strong>Recommended field order:</strong> Title → Description → Keywords → Headline → Creator → Copyright.
+            </div>
           </section>
 
           <section id="renaming" class="doc-section" data-reveal>
-            <h2>Renaming files</h2>
-            <p>Naming conventions help generate predictable file names for batches. Select a convention, then check the live rename preview before applying changes.</p>
-            <div class="doc-callout">
-              <strong>Safe workflow:</strong> Test with a small group of copied photos first when creating a new naming pattern.
+            <h2>Renaming files safely</h2>
+            <p>Use naming conventions to generate consistent output without manual renaming.</p>
+            <div class="doc-grid">
+              <article class="doc-card">
+                <h3>Preview first</h3>
+                <p>Always verify generated names before applying to a full folder.</p>
+              </article>
+              <article class="doc-card">
+                <h3>Keep sequencing clear</h3>
+                <p>Use predictable sequence patterns for sorting and archive continuity.</p>
+              </article>
+              <article class="doc-card">
+                <h3>Test on duplicates</h3>
+                <p>When testing a new scheme, start with copied files to avoid accidental overwrite surprises.</p>
+              </article>
+              <article class="doc-card">
+                <h3>Combine with templates</h3>
+                <p>Template + naming convention creates a fast, repeatable production loop.</p>
+              </article>
             </div>
           </section>
 
-          <section id="settings" class="doc-section" data-reveal>
-            <h2>Settings</h2>
-            <div class="doc-grid">
-              <article class="doc-card">
-                <h3>Default selections</h3>
-                <p>Choose a default metadata template and naming convention so the main screen opens with your preferred workflow ready.</p>
-              </article>
-              <article class="doc-card">
-                <h3>Photo browser display</h3>
-                <p>Switch between list and grid mode, then resize grid thumbnails to match your screen size and working style.</p>
-              </article>
-              <article class="doc-card">
-                <h3>Keyboard shortcuts</h3>
-                <p>Set hotkeys for Select All, Unselect All, Delete Selected, Apply, and Pick Photos. Defaults use Command on macOS and Ctrl on Windows/Linux.</p>
-              </article>
-              <article class="doc-card">
-                <h3>Updates and support</h3>
-                <p>Use the update button to check for new releases and the bug-details button to copy useful diagnostics for developers.</p>
-              </article>
+          <section id="media" class="doc-section" data-reveal>
+            <h2>Media gallery</h2>
+            <p>Reference screenshots for onboarding, release notes, and support messages.</p>
+            <div class="doc-media-grid">
+              <figure class="doc-media-item"><img src="assets/screenshot-1.PNG" alt="Metadata editor screenshot" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshot-2.PNG" alt="Batch rename screenshot" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshot-3.PNG" alt="Template manager screenshot" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="https://placehold.co/800x520/e0ecff/2563eb?text=Future+Screenshot+04" alt="Future screenshot placeholder 4" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="https://placehold.co/800x520/f1f5f9/334155?text=Future+Screenshot+05" alt="Future screenshot placeholder 5" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="https://placehold.co/800x520/e2e8f0/0f172a?text=Future+Screenshot+06" alt="Future screenshot placeholder 6" loading="lazy" /></figure>
+            </div>
+          </section>
+
+          <section id="tutorial-video" class="doc-section" data-reveal>
+            <h2>Video tutorial</h2>
+            <p>Embed your official setup and workflow tutorial for visual onboarding.</p>
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                title="Gledhill Metadata documentation tutorial"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
             </div>
           </section>
 
           <section id="troubleshooting" class="doc-section" data-reveal>
             <h2>Troubleshooting</h2>
             <details class="doc-faq">
-              <summary>Pick Photos does not open Finder on macOS</summary>
-              <p>Make sure Gledhill Metadata has permission to access files and folders in macOS System Settings. Drag and drop can still work even when picker access is blocked.</p>
+              <summary>Photo picker does not open on macOS</summary>
+              <p>Check macOS permissions in System Settings and ensure the app has file access permission.</p>
             </details>
             <details class="doc-faq">
-              <summary>Metadata clear verification reports remaining tags</summary>
-              <p>Some embedded metadata, such as color profiles, may remain because they are important for image appearance. If you need a specific tag removed, copy bug details and include the exact file type and tag name.</p>
+              <summary>Some metadata appears to remain after clearing</summary>
+              <p>Certain embedded tags can be preserved for image integrity. Include exact tag names in bug reports.</p>
             </details>
             <details class="doc-faq">
-              <summary>The app opens too small or too large</summary>
-              <p>Resize the window once, then close the app normally. Gledhill Metadata saves the last window size and restores it on launch.</p>
+              <summary>Window size feels wrong on launch</summary>
+              <p>Resize once and close normally; the app restores the last window dimensions on next launch.</p>
             </details>
           </section>
 
           <section id="bug-reports" class="doc-section" data-reveal>
-            <h2>Bug reports</h2>
-            <p>Good bug reports make fixes much faster. In Settings, click <strong>Copy Bug Details</strong>, then paste that information into a GitHub issue or support message.</p>
+            <h2>Report better bugs, get faster fixes</h2>
+            <p>Open Settings in the app and use <strong>Copy Bug Details</strong> before filing an issue.</p>
             <ul class="doc-list">
-              <li>What you expected to happen.</li>
-              <li>What actually happened.</li>
-              <li>Your operating system and app version.</li>
-              <li>A sample filename or metadata tag if the issue is metadata-related.</li>
+              <li>What you expected</li>
+              <li>What happened instead</li>
+              <li>OS + app version</li>
+              <li>Sample filename or metadata key</li>
             </ul>
-            <a class="btn btn-secondary" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata/issues" target="_blank" rel="noopener noreferrer">Open issue tracker</a>
+              <a class="btn btn-outline" href="index.html#download">Get latest build</a>
+            </div>
           </section>
         </div>
       </div>
@@ -180,7 +189,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Gledhill Metadata</p>
-      <a href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      <a href="index.html">Back to homepage</a>
     </div>
   </footer>
 
