@@ -2,6 +2,8 @@
 
 ### [🌐 Visit the Website → nerd-or-geek.github.io/Gledhill-Metadata](https://nerd-or-geek.github.io/Gledhill-Metadata/)
 
+### [📘 Open the User Guide → nerd-or-geek.github.io/Gledhill-Metadata/user-guide.html](https://nerd-or-geek.github.io/Gledhill-Metadata/user-guide.html)
+
 ---
 
 A cross-platform photo metadata editor for fast batch editing, reusable templates, and image renaming.
@@ -55,7 +57,7 @@ The Linux helper scripts now live in [linux](linux).
 
 ## Version
 
-Current release: **v1.6.0**
+Current release: **v1.8.0**
 
 ## License
 

@@ -8,7 +8,7 @@
   <title>Documentation — Gledhill Metadata</title>
   <meta property="og:title" content="Documentation — Gledhill Metadata" />
   <meta property="og:description" content="Learn how to import photos, apply templates, rename files, troubleshoot issues, and submit high-quality bug reports." />
-  <meta property="og:image" content="https://nerd-or-geek.github.io/Gledhill-Metadata/assets/screenshot-1.PNG" />
+  <meta property="og:image" content="https://nerd-or-geek.github.io/Gledhill-Metadata/assets/screenshots/user-guide/02-GM-main-screen-Grid-view.png" />
   <meta property="og:url" content="https://nerd-or-geek.github.io/Gledhill-Metadata/docs.html" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,12 +22,18 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Gledhill Metadata home">Gledhill Metadata</a>
+      <a href="index.html#top" class="brand" aria-label="Gledhill Metadata home">
+        <img class="brand-logo" src="assets/app_logo-web.png" alt="" aria-hidden="true" />
+        <span>Gledhill Metadata</span>
+        <span class="brand-version">v1.8.0</span>
+      </a>
       <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#top">Home</a>
         <a href="index.html#features">Features</a>
         <a href="index.html#gallery">Gallery</a>
         <a href="index.html#download">Download</a>
-        <a href="docs.html" class="active" aria-current="page">Documentation</a>
+        <a href="docs.html" class="active" aria-current="page">Docs</a>
+        <a href="user-guide.html">User Guide</a>
       </nav>
       <a class="btn btn-outline btn-small" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
@@ -39,8 +45,12 @@
         <p class="eyebrow">Documentation Center</p>
         <h1>Learn the full Gledhill Metadata workflow</h1>
         <p class="hero-tagline">From first import to production-ready batch output — this guide helps you onboard quickly and troubleshoot effectively.</p>
+        <div class="hero-micro-proof" aria-label="Release information">
+          <span>Current release v1.8.0</span>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#quick-start">Start here</a>
+          <a class="btn btn-outline" href="user-guide.html">Open visual guide</a>
           <a class="btn btn-ghost" href="#tutorial-video">Watch tutorial</a>
         </div>
       </div>
@@ -56,6 +66,7 @@
             <a href="#media">Media gallery</a>
             <a href="#tutorial-video">Video tutorial</a>
             <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#faq">FAQ</a>
             <a href="#bug-reports">Bug reports</a>
           </nav>
         </aside>
@@ -63,27 +74,27 @@
         <div class="doc-content">
           <section id="quick-start" class="doc-section" data-reveal>
             <h2>Quick start</h2>
-            <p>Use this path for your first successful batch in under five minutes.</p>
+            <p>Use this path for your first successful batch in under five minutes. If you prefer a screenshot walkthrough, open the <a class="doc-inline-link" href="user-guide.html">visual user guide</a>.</p>
             <div class="doc-grid">
               <article class="doc-card">
                 <h3>1) Import photos</h3>
-                <p>Open the app and click <strong>Pick Photos</strong>, or drag files directly into the main view.</p>
+                <p>Open the app and click <strong>Pick Photos</strong>, or drag files directly into the Main screen.</p>
               </article>
               <article class="doc-card">
                 <h3>2) Select output rules</h3>
-                <p>Choose a metadata template and naming convention that fits the shoot.</p>
+                <p>Choose the metadata template and naming convention that fit the batch.</p>
               </article>
               <article class="doc-card">
                 <h3>3) Review previews</h3>
-                <p>Check fields and rename output before applying changes to your files.</p>
+                <p>Check selected photos, metadata intent, and generated filenames before applying.</p>
               </article>
               <article class="doc-card">
                 <h3>4) Apply and verify</h3>
-                <p>Commit changes, then spot-check a few files to confirm the expected result.</p>
+                <p>Accept the confirmation prompt, then spot-check a few files to confirm the result.</p>
               </article>
             </div>
             <div class="doc-callout">
-              <strong>Tip:</strong> Keep one clean “golden template” for recurring workflows (events, products, archives).
+              <strong>Tip:</strong> Keep one clean “golden template” for recurring workflows. See the <a href="user-guide.html#safe-apply">safe apply checklist</a> before running a new batch.
             </div>
           </section>
 
@@ -91,13 +102,13 @@
             <h2>Metadata templates</h2>
             <p>Templates standardize metadata entry and reduce repetitive editing across shoots.</p>
             <ol class="doc-steps">
-              <li>Create a template with your most-used fields.</li>
+              <li>Create a template with supported, commonly used fields.</li>
               <li>Name it clearly by workflow (e.g., <em>Wedding-Editorial</em>).</li>
-              <li>Apply the template to selected photos in one action.</li>
-              <li>Save revisions when standards change.</li>
+              <li>Favorite important templates or set one as the default from the three-dot menu.</li>
+              <li>Apply the template to selected photos from the Main screen.</li>
             </ol>
             <div class="doc-callout">
-              <strong>Recommended field order:</strong> Title → Description → Keywords → Headline → Creator → Copyright.
+              <strong>Recommended field order:</strong> Title → Description / Subject → Tags / Keywords → Comments / Headline → Authors / Creator → Copyright. For screenshots, see <a href="user-guide.html#metadata-workflows">metadata workflows in the user guide</a>.
             </div>
           </section>
 
@@ -122,18 +133,21 @@
                 <p>Template + naming convention creates a fast, repeatable production loop.</p>
               </article>
             </div>
+            <div class="doc-callout">
+              <strong>Need examples?</strong> The <a href="user-guide.html#rename-workflows">rename workflow guide</a> shows the rename library and details editor.
+            </div>
           </section>
 
           <section id="media" class="doc-section" data-reveal>
             <h2>Media gallery</h2>
-            <p>Reference screenshots for onboarding, release notes, and support messages.</p>
+            <p>Reference screenshots for onboarding, release notes, and support messages. The full screenshot walkthrough lives in the <a class="doc-inline-link" href="user-guide.html">visual user guide</a>.</p>
             <div class="doc-media-grid">
-              <figure class="doc-media-item"><img src="assets/screenshot-1.PNG" alt="Metadata editor screenshot" loading="lazy" /></figure>
-              <figure class="doc-media-item"><img src="assets/screenshot-2.PNG" alt="Batch rename screenshot" loading="lazy" /></figure>
-              <figure class="doc-media-item"><img src="assets/screenshot-3.PNG" alt="Template manager screenshot" loading="lazy" /></figure>
-              <figure class="doc-media-item"><img src="https://placehold.co/800x520/e0ecff/2563eb?text=Future+Screenshot+04" alt="Future screenshot placeholder 4" loading="lazy" /></figure>
-              <figure class="doc-media-item"><img src="https://placehold.co/800x520/f1f5f9/334155?text=Future+Screenshot+05" alt="Future screenshot placeholder 5" loading="lazy" /></figure>
-              <figure class="doc-media-item"><img src="https://placehold.co/800x520/e2e8f0/0f172a?text=Future+Screenshot+06" alt="Future screenshot placeholder 6" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/00-GM-main-screen-blank.png" alt="Main screen before photos are loaded" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/02-GM-main-screen-Grid-view.png" alt="Main screen grid view" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/04-GM-main-screen-Rename-preview.png" alt="Rename preview on main screen" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/05-GM-workflow-screen-metadata-view.png" alt="Metadata workflows screen" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/07-GM-workflow-screen-rename-view.png" alt="Rename workflows screen" loading="lazy" /></figure>
+              <figure class="doc-media-item"><img src="assets/screenshots/user-guide/09-GM-settings-screen.png" alt="Settings screen" loading="lazy" /></figure>
             </div>
           </section>
 
@@ -153,18 +167,69 @@
 
           <section id="troubleshooting" class="doc-section" data-reveal>
             <h2>Troubleshooting</h2>
+            <p>Start here when something behaves unexpectedly. Most issues fall into permissions, unsupported metadata fields, naming patterns, or app settings.</p>
             <details class="doc-faq">
               <summary>Photo picker does not open on macOS</summary>
-              <p>Check macOS permissions in System Settings and ensure the app has file access permission.</p>
+              <p>Check macOS System Settings for file/folder access permissions. You can also drag images into the Main screen as a workaround while permissions are being fixed.</p>
             </details>
             <details class="doc-faq">
               <summary>Some metadata appears to remain after clearing</summary>
-              <p>Certain embedded tags can be preserved for image integrity. Include exact tag names in bug reports.</p>
+              <p>Certain embedded tags, especially color/profile data, may be preserved because removing them can affect image appearance. If a specific tag should be removed, include the exact tag name and file type in a bug report.</p>
             </details>
             <details class="doc-faq">
               <summary>Window size feels wrong on launch</summary>
               <p>Resize once and close normally; the app restores the last window dimensions on next launch.</p>
             </details>
+            <details class="doc-faq">
+              <summary>I see an error but not the full details</summary>
+              <p>By default, full error details are not shown immediately. Open Settings → Safety & errors to review the recent error log, or enable <strong>Show full errors immediately</strong> if you want detailed messages on screen.</p>
+            </details>
+          </section>
+
+          <section id="faq" class="doc-section" data-reveal>
+            <h2>Frequently asked questions</h2>
+            <div class="faq-grid">
+              <details class="doc-faq">
+                <summary>Does Gledhill Metadata upload my photos?</summary>
+                <p>No. The app is local-first. Photos and metadata are processed on your computer rather than uploaded to a cloud service.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Which metadata fields should I use first?</summary>
+                <p>Start with Title, Description/Subject, Tags/Keywords, Headline, Creator/Author, and Copyright. These fields cover most publishing and archive workflows.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>What is the difference between metadata templates and rename rules?</summary>
+                <p>Metadata templates write values into image metadata. Rename rules generate filenames. A normal batch uses one of each.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Can I make a template or rename rule the default?</summary>
+                <p>Yes. Use the three-dot menu on an item in Workflows and choose <strong>Set as Default</strong>, or choose defaults in Settings.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Why do I need a sequence token in rename rules?</summary>
+                <p>A sequence token helps prevent duplicate names when several photos share the same date, title, or metadata values.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Can I change keyboard shortcuts?</summary>
+                <p>Yes. Open Settings → Keyboard shortcuts to customize Select All, Unselect All, Delete Selected, Apply, and Pick Photos.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>What should I do before applying changes to a large batch?</summary>
+                <p>Review selected photos, confirm the template and rename rule, inspect the rename preview, and keep the Apply confirmation enabled. For new workflows, test on copied files first.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Where do I find full error details?</summary>
+                <p>Open Settings → Safety & errors. The app keeps the most recent errors there and includes them when you use <strong>Copy Bug Details</strong>.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Does the Linux version use an installer?</summary>
+                <p>The Linux build is distributed as an AppImage. The website also provides optional install and uninstall scripts for convenience.</p>
+              </details>
+              <details class="doc-faq">
+                <summary>Where can I see the app screens step by step?</summary>
+                <p>Open the <a href="user-guide.html">visual user guide</a> for a screenshot-based walkthrough of the Main, Workflows, and Settings screens.</p>
+              </details>
+            </div>
           </section>
 
           <section id="bug-reports" class="doc-section" data-reveal>
@@ -179,6 +244,7 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata/issues" target="_blank" rel="noopener noreferrer">Open issue tracker</a>
               <a class="btn btn-outline" href="index.html#download">Get latest build</a>
+              <a class="btn btn-ghost" href="user-guide.html">Review user guide</a>
             </div>
           </section>
         </div>
@@ -189,7 +255,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Gledhill Metadata</p>
-      <a href="index.html">Back to homepage</a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html#top">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="user-guide.html">User Guide</a>
+        <a href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
     </div>
   </footer>
 

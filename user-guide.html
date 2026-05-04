@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A visual user guide for Gledhill Metadata, with screenshots showing how to import photos, select views, apply metadata templates, rename files, and configure settings." />
+  <meta name="keywords" content="Gledhill Metadata user guide, photo metadata app tutorial, EXIF IPTC XMP guide, batch rename screenshots" />
+  <title>User Guide — Gledhill Metadata</title>
+  <meta property="og:title" content="User Guide — Gledhill Metadata" />
+  <meta property="og:description" content="A screenshot-based walkthrough for importing photos, choosing workflows, previewing rename output, and applying metadata safely." />
+  <meta property="og:image" content="https://nerd-or-geek.github.io/Gledhill-Metadata/assets/screenshots/user-guide/02-GM-main-screen-Grid-view.png" />
+  <meta property="og:url" content="https://nerd-or-geek.github.io/Gledhill-Metadata/user-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://nerd-or-geek.github.io/Gledhill-Metadata/user-guide.html" />
+  <link rel="icon" type="image/x-icon" href="gledhillmetadata/assets/icons/app_logo.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="brand" aria-label="Gledhill Metadata home">
+        <img class="brand-logo" src="assets/app_logo-web.png" alt="" aria-hidden="true" />
+        <span>Gledhill Metadata</span>
+        <span class="brand-version">v1.8.0</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#top">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#download">Download</a>
+        <a href="docs.html">Docs</a>
+        <a href="user-guide.html" class="active" aria-current="page">User Guide</a>
+      </nav>
+      <a class="btn btn-outline btn-small" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="doc-hero">
+      <div class="container doc-hero-inner" data-reveal>
+        <p class="eyebrow">Visual User Guide</p>
+        <h1>Run a complete Gledhill Metadata workflow</h1>
+        <p class="hero-tagline">This guide uses real app screenshots to walk through importing photos, selecting views, creating workflows, previewing names, applying changes, and configuring settings.</p>
+        <div class="hero-micro-proof" aria-label="Release information">
+          <span>Current release v1.8.0</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">Start the walkthrough</a>
+          <a class="btn btn-ghost" href="docs.html">Open reference docs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container doc-layout">
+        <aside class="doc-sidebar" aria-label="User guide section navigation">
+          <nav>
+            <a href="#start">Start screen</a>
+            <a href="#import">Import photos</a>
+            <a href="#browse">Browse photos</a>
+            <a href="#preview">Preview names</a>
+            <a href="#metadata-workflows">Metadata workflows</a>
+            <a href="#rename-workflows">Rename workflows</a>
+            <a href="#settings">Settings</a>
+            <a href="#safe-apply">Safe apply checklist</a>
+          </nav>
+        </aside>
+
+        <div class="doc-content">
+          <section id="start" class="doc-section guide-section" data-reveal>
+            <div class="guide-copy">
+              <p class="eyebrow">Step 1</p>
+              <h2>Start on the Main screen</h2>
+              <p>The Main screen is the command center for day-to-day work. Before any photos are loaded, the app gives you a clean drop zone and a <strong>Pick Photos</strong> button.</p>
+              <ul class="doc-list">
+                <li>Use <strong>Pick Photos</strong> to open the system file picker.</li>
+                <li>Drag photos directly into the window when that is faster.</li>
+                <li>The top navigation keeps the app organized into <strong>Main</strong>, <strong>Workflows</strong>, and <strong>Settings</strong>.</li>
+              </ul>
+            </div>
+            <figure class="guide-shot">
+              <img src="assets/screenshots/user-guide/00-GM-main-screen-blank.png" alt="Blank Gledhill Metadata Main screen with Pick Photos button" loading="lazy" />
+              <figcaption>Main screen before photos are loaded.</figcaption>
+            </figure>
+          </section>
+
+          <section id="import" class="doc-section guide-section" data-reveal>
+            <div class="guide-copy">
+              <p class="eyebrow">Step 2</p>
+              <h2>Choose photos from your computer</h2>
+              <p>Clicking <strong>Pick Photos</strong> opens the native picker for your platform. Select one or more image files, then open them into the workspace.</p>
+              <div class="doc-callout">
+                <strong>macOS note:</strong> If Finder does not open, check app permissions in System Settings. Drag and drop can still work even when picker permissions are blocked.
+              </div>
+            </div>
+            <figure class="guide-shot">
+              <img src="assets/screenshots/user-guide/01-GM-OpenPictures.png" alt="System file picker selecting photos for Gledhill Metadata" loading="lazy" />
+              <figcaption>Select files using the native file picker.</figcaption>
+            </figure>
+          </section>
+
+          <section id="browse" class="doc-section" data-reveal>
+            <p class="eyebrow">Step 3</p>
+            <h2>Browse and select the photos you want to change</h2>
+            <p>After loading photos, use either Grid view or List view. Both views support selection, focusing a photo to inspect metadata, and removing selected files from the current batch.</p>
+            <div class="guide-two-col">
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/02-GM-main-screen-Grid-view.png" alt="Main screen showing photos in grid view" loading="lazy" />
+                <figcaption>Grid view is best when visual thumbnails matter.</figcaption>
+              </figure>
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/03-GM-main-screen-list-view.png" alt="Main screen showing photos in list view" loading="lazy" />
+                <figcaption>List view is compact and useful for filename-heavy work.</figcaption>
+              </figure>
+            </div>
+            <div class="doc-grid">
+              <article class="doc-card">
+                <h3>Select All / Unselect All</h3>
+                <p>Use the toolbar buttons or your configured keyboard shortcuts to quickly control the current batch.</p>
+              </article>
+              <article class="doc-card">
+                <h3>Thumbnail size</h3>
+                <p>In Grid view, use the small thumbnail slider to choose one of five sizes from Small to Large.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="preview" class="doc-section guide-section" data-reveal>
+            <div class="guide-copy">
+              <p class="eyebrow">Step 4</p>
+              <h2>Review the rename preview before applying</h2>
+              <p>The rename preview shows how selected files will be named after applying the chosen naming convention. This is the final checkpoint before changing files.</p>
+              <ul class="doc-list">
+                <li>Confirm the original names and generated names look correct.</li>
+                <li>Make sure the sequence pattern prevents duplicate filenames.</li>
+                <li>Use the Apply confirmation dialog as a last safety review.</li>
+              </ul>
+            </div>
+            <figure class="guide-shot">
+              <img src="assets/screenshots/user-guide/04-GM-main-screen-Rename-preview.png" alt="Main screen showing rename preview before applying changes" loading="lazy" />
+              <figcaption>Rename preview shows what will happen before files are changed.</figcaption>
+            </figure>
+          </section>
+
+          <section id="metadata-workflows" class="doc-section" data-reveal>
+            <p class="eyebrow">Step 5</p>
+            <h2>Create and manage metadata templates</h2>
+            <p>The Workflows page stores reusable metadata templates. Templates let you apply consistent title, description, keyword, headline, creator, and copyright information across selected photos.</p>
+            <div class="guide-two-col">
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/05-GM-workflow-screen-metadata-view.png" alt="Workflows page showing metadata templates" loading="lazy" />
+                <figcaption>Metadata template library with search, favorites, import, and export.</figcaption>
+              </figure>
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/06-GM-workflow-screen-metadata-details-view.png" alt="Metadata template details editor" loading="lazy" />
+                <figcaption>Template details let you choose fields and preview what will be written.</figcaption>
+              </figure>
+            </div>
+            <div class="doc-callout">
+              <strong>Recommended field order:</strong> Title → Description / Subject → Tags / Keywords → Comments / Headline → Authors / Creator → Copyright.
+            </div>
+          </section>
+
+          <section id="rename-workflows" class="doc-section" data-reveal>
+            <p class="eyebrow">Step 6</p>
+            <h2>Create and manage naming conventions</h2>
+            <p>Naming conventions control how selected photos are renamed. A good naming pattern usually combines date, title or metadata values, and a sequence token.</p>
+            <div class="guide-two-col">
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/07-GM-workflow-screen-rename-view.png" alt="Workflows page showing rename rules" loading="lazy" />
+                <figcaption>Rename rule library with favorites and export options.</figcaption>
+              </figure>
+              <figure class="guide-shot">
+                <img src="assets/screenshots/user-guide/08-GM-workflow-screen-rename-details-view.png" alt="Rename rule details editor showing pattern preview" loading="lazy" />
+                <figcaption>The rule editor shows pattern guidance and sample output.</figcaption>
+              </figure>
+            </div>
+            <div class="doc-grid">
+              <article class="doc-card">
+                <h3>Use sequence tokens</h3>
+                <p>Include a sequence token to avoid duplicate output names during batch work.</p>
+              </article>
+              <article class="doc-card">
+                <h3>Set defaults</h3>
+                <p>Use the three-dot menu on a template or rule to make it the default workflow.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="settings" class="doc-section guide-section" data-reveal>
+            <div class="guide-copy">
+              <p class="eyebrow">Step 7</p>
+              <h2>Configure defaults, safety, and shortcuts</h2>
+              <p>The Settings page keeps your preferred defaults and quality-of-life options in one place.</p>
+              <ul class="doc-list">
+                <li>Choose the default metadata template and naming convention.</li>
+                <li>Switch between List and Grid view and set the grid thumbnail size.</li>
+                <li>Keep <strong>Show Apply confirmation</strong> on for safer batch operations.</li>
+                <li>Use <strong>Show full errors immediately</strong> only when you want detailed error text on screen.</li>
+                <li>Customize keyboard shortcuts for Select All, Unselect All, Delete Selected, Apply, and Pick Photos.</li>
+              </ul>
+            </div>
+            <figure class="guide-shot">
+              <img src="assets/screenshots/user-guide/09-GM-settings-screen.png" alt="Settings page showing workflow defaults, photo browser settings, safety options, and keyboard shortcuts" loading="lazy" />
+              <figcaption>Settings control defaults, safety prompts, error behavior, and hotkeys.</figcaption>
+            </figure>
+          </section>
+
+          <section id="safe-apply" class="doc-section" data-reveal>
+            <p class="eyebrow">Final checklist</p>
+            <h2>Apply changes safely</h2>
+            <p>Before clicking <strong>Apply</strong>, pause for a quick review. The app is designed to make batch work fast, but file changes should still be intentional.</p>
+            <div class="doc-grid">
+              <article class="doc-card">
+                <h3>1) Photos selected</h3>
+                <p>Only selected photos are changed. Use Select All or Unselect All if the batch is not right.</p>
+              </article>
+              <article class="doc-card">
+                <h3>2) Template chosen</h3>
+                <p>Confirm the metadata template matches the shoot, client, or archive workflow.</p>
+              </article>
+              <article class="doc-card">
+                <h3>3) Naming rule chosen</h3>
+                <p>Review the naming convention and check the preview for duplicates or unexpected text.</p>
+              </article>
+              <article class="doc-card">
+                <h3>4) Confirmation accepted</h3>
+                <p>Use the Apply confirmation dialog as your final “yes, do this” moment.</p>
+              </article>
+            </div>
+            <div class="doc-callout">
+              <strong>Best practice:</strong> For a brand-new workflow, test on copied files first. Once it looks right, save the template and naming convention as favorites or defaults.
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Gledhill Metadata</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html#top">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="user-guide.html">User Guide</a>
+        <a href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

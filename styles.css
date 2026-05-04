@@ -134,14 +134,38 @@ p {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-weight: 800;
   letter-spacing: -0.03em;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16);
+}
+
+.brand-version {
+  border: 1px solid #c7d6f0;
+  border-radius: 999px;
+  padding: 0.12rem 0.42rem;
+  background: rgba(255, 255, 255, 0.78);
+  color: #1d4ed8;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 
 .nav a {
@@ -492,6 +516,18 @@ p {
   margin-bottom: 1.2rem;
 }
 
+.version-note {
+  width: fit-content;
+  margin: -0.7rem auto 1.3rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #c7d6f0;
+  border-radius: 999px;
+  background: #fff;
+  color: #334155;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
+}
+
 .download-card {
   padding: 1.3rem;
   display: flex;
@@ -598,6 +634,15 @@ p {
   color: #1d4ed8;
 }
 
+.doc-inline-link,
+.doc-section a:not(.btn) {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 .doc-content {
   display: grid;
   gap: 1rem;
@@ -691,6 +736,58 @@ p {
   margin-top: 0.65rem;
 }
 
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.faq-grid .doc-faq {
+  margin-top: 0;
+}
+
+.guide-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.25fr);
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.guide-copy .doc-list {
+  margin-top: 0.75rem;
+}
+
+.guide-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.guide-shot {
+  margin: 0;
+  border: 1px solid #d5e1f4;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-shot img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.guide-shot figcaption {
+  padding: 0.75rem 0.9rem;
+  color: #334155;
+  font-size: 0.92rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border-top: 1px solid #e1e9f7;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   background: #f4f8ff;
@@ -707,6 +804,13 @@ p {
 .footer-inner a {
   color: #1d4ed8;
   font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.85rem;
 }
 
 [data-reveal] {
@@ -748,6 +852,12 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .guide-section,
+  .guide-two-col,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
   .doc-sidebar {
     position: static;
   }
@@ -785,6 +895,7 @@ p {
   .trust-grid,
   .doc-grid,
   .doc-media-grid,
+  .faq-grid,
   .doc-sidebar nav {
     grid-template-columns: 1fr;
   }
@@ -806,6 +917,10 @@ p {
     justify-content: center;
     min-height: auto;
     padding: 0.8rem 0;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
