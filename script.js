@@ -7,7 +7,48 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initNavSpy();
   initGallery();
+  initMobileNav();
 });
+
+function initMobileNav() {
+  const btn = document.querySelector(".nav-hamburger");
+  const overlay = document.getElementById("mobile-nav");
+  if (!btn || !overlay) return;
+
+  function openNav() {
+    btn.classList.add("is-open");
+    overlay.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    btn.classList.remove("is-open");
+    overlay.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("is-open")) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  });
+
+  // Close on link click
+  overlay.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNav();
+  });
+}
 
 function initScrollReveal() {
   const revealTargets = document.querySelectorAll("[data-reveal]");

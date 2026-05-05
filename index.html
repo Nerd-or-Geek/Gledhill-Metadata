@@ -39,9 +39,24 @@
         <a href="docs.html">Docs</a>
         <a href="user-guide.html">User Guide</a>
       </nav>
-      <a class="btn btn-outline btn-small" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn-outline btn-small nav-github" href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+  <div class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#top">Home</a>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#download">Download</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="user-guide.html">User Guide</a>
+      <a href="https://github.com/Nerd-or-Geek/Gledhill-Metadata" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </div>
 
   <main id="top">
     <section class="hero">
@@ -61,10 +76,11 @@
           <a class="btn btn-outline" href="user-guide.html">View user guide</a>
         </div>
 
-      <div class="support-banner">
-        <p>💙 <strong>Free for individuals</strong> • Businesses are encouraged to <a href="pricing.html">support development</a></p>
-      </div>
-          </div>
+        <div class="support-banner">
+          <p>💙 <strong>Free for individuals</strong> • Businesses are encouraged to <a href="pricing.html">support development</a></p>
+        </div>
+
+        <div class="hero-screenshot">
           <img src="assets/screenshots/user-guide/02-GM-main-screen-Grid-view.png" alt="Gledhill Metadata Main screen in grid view" />
         </div>
       </div>
