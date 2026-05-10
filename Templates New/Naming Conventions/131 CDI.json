@@ -1,5 +1,0 @@
-{
-  "name": "131 CDI",
-  "isFavorite": false,
-  "pattern": "{date}-HCS-CDI-{sequence:02d}"
-}

@@ -1,5 +1,0 @@
-{
-  "name": "131 Event",
-  "isFavorite": false,
-  "pattern": "{date}_Event_{sequence:02d}"
-}

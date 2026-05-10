@@ -1,5 +1,0 @@
-{
-  "name": "131 PT",
-  "isFavorite": false,
-  "pattern": "{datetime:%Y-%B}-HCS-PT-{sequence:02d}"
-}

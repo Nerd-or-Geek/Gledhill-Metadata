@@ -1,4 +1,0 @@
-{
-  "name": "Date + Title",
-  "pattern": "{date}_{title}_{sequence:02d}"
-}

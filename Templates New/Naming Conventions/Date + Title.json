@@ -1,5 +1,0 @@
-{
-  "name": "Date + Title",
-  "isFavorite": false,
-  "pattern": "{date}_{title}_{sequence:02d}"
-}

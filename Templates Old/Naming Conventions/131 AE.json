@@ -1,4 +1,0 @@
-{
-  "name": "131 AE",
-  "pattern": "{datetime:%m-%y}-HCS-AE-{sequence:02d}"
-}

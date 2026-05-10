@@ -1,4 +1,0 @@
-{
-  "name": "131 ES",
-  "pattern": "{date}-HCS-ES-{sequence:02d}"
-}
