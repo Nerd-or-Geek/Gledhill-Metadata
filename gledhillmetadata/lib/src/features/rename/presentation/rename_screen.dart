@@ -468,6 +468,7 @@ class RenameScreen extends ConsumerWidget {
     final patternController = TextEditingController(
       text: existing?.pattern ?? '{year}-{month}-{day}_{sequence:3}_{metadata:author}',
     );
+    final patternFocusNode = FocusNode();
 
     const metadataChoices = <String>[
       'author',
@@ -510,6 +511,7 @@ class RenameScreen extends ConsumerWidget {
                 text: updated,
                 selection: TextSelection.collapsed(offset: start + token.length),
               );
+              patternFocusNode.requestFocus();
               setModalState(() {});
             }
 
@@ -528,6 +530,7 @@ class RenameScreen extends ConsumerWidget {
                       const SizedBox(height: 10),
                       TextField(
                         controller: patternController,
+                        focusNode: patternFocusNode,
                         onChanged: (_) => setModalState(() {}),
                         decoration: const InputDecoration(
                           labelText: 'Pattern',
@@ -551,26 +554,32 @@ class RenameScreen extends ConsumerWidget {
                             '{sequence}',
                             '{sequence:3}',
                           ])
-                            OutlinedButton(
-                              onPressed: () => insertToken(token),
-                              child: Text(token),
+                            Focus(
+                              canRequestFocus: false,
+                              child: OutlinedButton(
+                                onPressed: () => insertToken(token),
+                                child: Text(token),
+                              ),
                             ),
-                          DropdownButton<String>(
-                            hint: const Text('Insert metadata token'),
-                            items: metadataChoices
-                                .map(
-                                  (field) => DropdownMenuItem(
-                                    value: field,
-                                    child: Text(field),
-                                  ),
-                                )
-                                .toList(growable: false),
-                            onChanged: (value) {
-                              if (value == null) {
-                                return;
-                              }
-                              insertToken('{metadata:$value}');
-                            },
+                          Focus(
+                            canRequestFocus: false,
+                            child: DropdownButton<String>(
+                              hint: const Text('Insert metadata token'),
+                              items: metadataChoices
+                                  .map(
+                                    (field) => DropdownMenuItem(
+                                      value: field,
+                                      child: Text(field),
+                                    ),
+                                  )
+                                  .toList(growable: false),
+                              onChanged: (value) {
+                                if (value == null) {
+                                  return;
+                                }
+                                insertToken('{metadata:$value}');
+                              },
+                            ),
                           ),
                         ],
                       ),
@@ -597,6 +606,9 @@ class RenameScreen extends ConsumerWidget {
     );
 
     if (saved != true || nameController.text.trim().isEmpty) {
+      nameController.dispose();
+      patternController.dispose();
+      patternFocusNode.dispose();
       return;
     }
 
@@ -612,6 +624,10 @@ class RenameScreen extends ConsumerWidget {
     );
 
     await ref.read(libraryCatalogControllerProvider.notifier).refresh();
+    
+    nameController.dispose();
+    patternController.dispose();
+    patternFocusNode.dispose();
   }
 
   Future<String?> _askText(BuildContext context, String title, String label) async {
